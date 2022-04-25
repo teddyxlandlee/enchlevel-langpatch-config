@@ -18,7 +18,7 @@
       "xland.mcmod.enchlevellangpatch.config.LangPatchConfig::load"
     ],
     "modmenu": [
-
+      "xland.mcmod.enchlevellangpatch.config.LangPatchModMenuCompat"
     ]
   },
 
