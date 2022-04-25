@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "enchlevel-langpatch-config",
+  "version": "${version}",
+
+  "name": "Config - Enchantment Level Language Patch",
+  "description": "A GUI-config for Enchantment Level Language Patch",
+  "authors": [
+    "teddyxlandlee"
+  ],
+
+  "license": "MIT",
+  "icon": "assets/enchlevel-langpatch-config/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "xland.mcmod.enchlevellangpatch.config.LangPatchConfig::load"
+    ],
+    "modmenu": [
+
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.13.0",
+    "enchlevel-langpatch": "*",
+    "java": ">=17",
+
+    "modmenu": "*",
+    "cloth-config2": "*"
+  }
+}
