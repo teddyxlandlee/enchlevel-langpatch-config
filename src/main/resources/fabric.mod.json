@@ -25,7 +25,7 @@
   "depends": {
     "fabricloader": ">=0.13.0",
     "enchlevel-langpatch": "*",
-    "java": ">=17",
+    "java": ">=16",
 
     "modmenu": "*",
     "cloth-config2": "*"
