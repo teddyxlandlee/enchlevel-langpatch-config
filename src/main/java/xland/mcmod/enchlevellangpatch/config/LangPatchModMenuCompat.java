@@ -33,7 +33,8 @@ public class LangPatchModMenuCompat implements ModMenuApi {
                     }),
                     DropdownMenuBuilder.CellCreatorBuilder.of(id -> Utils.translate(id, true))
             );
-            dropdown1.setDefaultValue(DEFAULT_VALUE).setSelections(LangPatchConfig.ENCHANTMENT_REGISTRY.getIds());
+            dropdown1.setDefaultValue(DEFAULT_VALUE).setSelections(LangPatchConfig.ENCHANTMENT_REGISTRY.getIds())
+                            .setSaveConsumer(LangPatchConfig.getInstance()::setEnchantmentId);
 
             DropdownMenuBuilder<Identifier> dropdown2 = entryBuilder.startDropdownMenu(
                     new TranslatableText("enchlevel-langpatch.config.potion.registry"),
@@ -43,6 +44,8 @@ public class LangPatchModMenuCompat implements ModMenuApi {
                     }),
                     DropdownMenuBuilder.CellCreatorBuilder.of(id -> Utils.translate(id, false))
             );
+            dropdown2.setDefaultValue(DEFAULT_VALUE).setSelections(LangPatchConfig.POTION_REGISTRY.getIds())
+                            .setSaveConsumer(LangPatchConfig.getInstance()::setPotionId);
 
             category.addEntry(dropdown1.build()).addEntry(dropdown2.build());
 
